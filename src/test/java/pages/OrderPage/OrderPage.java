@@ -1,6 +1,7 @@
 package pages.OrderPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
@@ -32,6 +33,16 @@ public class OrderPage extends BasePage {
     private By seeBasket = By.xpath("//a[text()='Vezi coșul']");
     private By addToBasket2 = By.xpath("//button[@class='button button--xl button--secondary']");
     private By checkout = By.xpath("//button[@class='button button--xl w-full']");
+    private By emailField = By.id("email");
+    private By fNameField = By.id("TextField0");
+    private By sNameField = By.id("TextField1");
+    private By addressField = By.id("TextField3");
+    private By codeField = By.id("TextField4");
+    private By townField = By.id("TextField5");
+    private By selectRegion = By.id("Select1");
+    private By inputRegion = By.id("Select1");
+    private By phoneField = By.id("TextField6");
+    private By deliveryBox = By.id("basic-customManualPayment-85511110871");
 
 
 
@@ -82,6 +93,53 @@ public class OrderPage extends BasePage {
     public void clickCheckout(){
         LOG.info("Clicking the checkout button");
         driver.findElement(checkout).click();
+    }
+
+    public void insertEmail(String email){
+        LOG.info("Typing Email");
+        driver.findElement(emailField).sendKeys(email);
+    }
+
+    public void insertFName(String fName){
+        LOG.info("Typing first name");
+        driver.findElement(fNameField).sendKeys(fName);
+    }
+
+    public void insertSName(String sName){
+        LOG.info("Typing second name");
+        driver.findElement(sNameField).sendKeys(sName);
+    }
+
+    public void insertAddress(String address){
+        LOG.info("Typing address");
+        driver.findElement(addressField).sendKeys(address);
+    }
+
+    public void insertCode(String code){
+        LOG.info("Typing code");
+        driver.findElement(codeField).sendKeys(code);
+    }
+
+    public void insertTown(String town){
+        LOG.info("Typing town");
+        driver.findElement(townField).sendKeys(town);
+    }
+
+    public void selectRegion(String region){
+        LOG.info("Selecting region");
+        driver.findElement(selectRegion).click();
+        driver.findElement(inputRegion).sendKeys(region);
+        driver.findElement(selectRegion).sendKeys(Keys.ENTER);
+    }
+
+    public void insertPhone(String phone){
+        LOG.info("Typing phone");
+        driver.findElement(phoneField).sendKeys(phone);
+    }
+
+    public void clickDelivery(){
+        LOG.info("Clicking delivery with cash");
+        driver.findElement(deliveryBox).click();
     }
 
 

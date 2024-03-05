@@ -12,7 +12,14 @@ import static pages.BasePage.sleep;
 public class OrderTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(OrderTest.class);
 
-
+    String email = "ena99flo@yahoo.com";
+    String fName = "Elena";
+    String sName = "Negrea";
+    String address = "Str Lotus, Nr 55";
+    String code = "401564";
+    String town = "Turda";
+    String region = "Cluj";
+    String phone = "0745127783";
 
 
 
@@ -59,6 +66,34 @@ public class OrderTest extends BaseTest {
 
         LOG.info("Click checkout");
         orderPage.clickCheckout();
+        sleep(2000L);
+
+        LOG.info("Type email");
+        orderPage.insertEmail(email);
+
+        LOG.info("Type first name");
+        orderPage.insertFName(fName);
+
+        LOG.info("Type second name");
+        orderPage.insertSName(sName);
+
+        LOG.info("Type address");
+        orderPage.insertAddress(address);
+
+        LOG.info("Type code");
+        orderPage.insertCode(code);
+
+        LOG.info("Type town");
+        orderPage.insertTown(town);
+
+        LOG.info("Select region");
+        orderPage.selectRegion(region);
+
+        LOG.info("Type phone");
+        orderPage.insertPhone(phone);
+
+        LOG.info("Click delivery");
+        orderPage.clickDelivery();
 
 
 
