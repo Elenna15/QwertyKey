@@ -7,6 +7,7 @@ import pages.LogOutPage.LogOutPage;
 import pages.NewAddressPage.NewAddressPage;
 import pages.OrderPage.OrderPage;
 import pages.RegisterPage.RegisterPage;
+import pages.SalePage.SalePage;
 import pages.SignInPage.SignInPage;
 
 public class BaseTest {
@@ -16,6 +17,7 @@ public class BaseTest {
     public NewAddressPage newAddressPage = NewAddressPage.getInstance();
     public LogOutPage logOutPage = LogOutPage.getInstance();
     public OrderPage orderPage = OrderPage.getInstance();
+    public SalePage salePage = SalePage.getInstance();
 
     @BeforeSuite
     public void init() {

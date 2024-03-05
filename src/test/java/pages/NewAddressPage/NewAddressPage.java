@@ -24,7 +24,7 @@ public class NewAddressPage extends BasePage {
     private By connectButton = By.xpath("//div[text()='Conectează-te']");
     private By addressButton = By.xpath("//a[text()='Adrese']");
     private By addAddress = By.xpath("//div[text()='Adaugă o adresă']");
-    private By nameField = By.xpath("//div[@class='address-form']//input[@name='address[first_name]']");
+    private By nameField = By.xpath("//form[@id='address_form_new']//div[@class='address-form']//input[@name='address[first_name]']");
 
     public void insertEmail(String email){
         LOG.info("Typing Email");
