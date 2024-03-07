@@ -27,10 +27,12 @@ public class SalePage extends BasePage {
     private By brandButton = By.xpath("//button/span[text()='Brand']");
     private By optionBrand = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.brand-3']");
     private By layoutButton = By.xpath("//button/span[text()='Layout Tastatura']");
-    private By optionLayout = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.layout_tastatura-2']");
+    private By optionLayout = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.layout_tastatura-3']");
     private By connectionButton = By.xpath("//button//span[text()='Tip Conexiune']");
     private By optionConnection = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.tip_conexiune-2']");
     private By priceButton = By.xpath("//button//span[text()='Preț']");
+    private By minimumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.gte']");
+    private By maximumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.lte']");
 
     public void clickSales() {
         LOG.info("Clicking the sales button");
@@ -40,6 +42,11 @@ public class SalePage extends BasePage {
     public void clickViewAll() {
         LOG.info("Clicking view all button");
         driver.findElement(viewAll).click();
+    }
+
+    public void clickAvailableBox(){
+        LOG.info("Clicking available button");
+        driver.findElement(availableBox).click();
     }
 
     public void clickBrandButton() {
@@ -75,6 +82,16 @@ public class SalePage extends BasePage {
     public void clickPriceButton(){
         LOG.info("Clicking the price button");
         driver.findElement(priceButton).click();
+    }
+
+    public void insertMinimum(String price1){
+        LOG.info("Inserting price");
+        driver.findElement(minimumPrice).sendKeys(price1);
+    }
+
+    public void insertMaximum(String price2){
+        LOG.info("Inserting price");
+        driver.findElement(maximumPrice).sendKeys(price2);
     }
 
 

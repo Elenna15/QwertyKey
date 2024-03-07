@@ -10,6 +10,9 @@ import static pages.BasePage.*;
 public class SaleTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(SaleTest.class);
 
+    String price1 = "50";
+    String price2 = "700";
+
 
 
     @Test
@@ -22,6 +25,9 @@ public class SaleTest extends BaseTest {
 
         LOG.info("Click view all");
         salePage.clickViewAll();
+
+        LOG.info("Click available button");
+        salePage.clickAvailableBox();
 
         LOG.info("Click brand");
         salePage.clickBrandButton();
@@ -48,7 +54,14 @@ public class SaleTest extends BaseTest {
 
         LOG.info("Click price");
         salePage.clickPriceButton();
+        sleep(2000L);
 
+        LOG.info("Insert price");
+        salePage.insertMinimum(price1);
+        sleep(2000L);
+
+        LOG.info("Insert price");
+        salePage.insertMaximum(price2);
 
 
     }
