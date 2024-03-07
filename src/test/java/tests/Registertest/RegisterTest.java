@@ -11,14 +11,19 @@ public class RegisterTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(RegisterTest.class);
     private String newUrl = getBaseUrl() + "account/register";
 
+
     String name = "Elena";
     String lastName = "Negrea";
-    String email = "ena99flo@yahoo.com";
+    String email = "ceva.altceva@" + generateRandomCharacters(5) + ".com";
     String password = "parola1511";
+
+    private String generateRandomCharacters(int i) {
+        return null;
+    }
 
 
     @Test
-    public void fillRegister(){
+    public void fillRegister() {
         driver.get(newUrl);
         sleep(3000L);
 

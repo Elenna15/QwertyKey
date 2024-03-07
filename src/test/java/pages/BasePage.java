@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class BasePage {
     private static final Logger LOG = LoggerFactory.getLogger(BasePage.class);
     public static WebDriver driver;
@@ -15,6 +17,7 @@ public class BasePage {
         driver = new ChromeDriver();
         String url = "https://qwertykey.ro/";
         driver.get(url);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
 
 
 
