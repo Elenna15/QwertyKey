@@ -23,7 +23,7 @@ public class OrderPage extends BasePage {
 
     private By keyCaps = By.xpath("//a[text()='Keycaps']");
     private By checkBox = By.xpath("//div[@class='facets-summary']//input[@class='switch']");
-    private By keySet = By.xpath("//a[text()='Set Taste QwertyKey Gganbu']");
+    private By keySet = By.xpath("//a[text()='Set taste QwertyKey LiftOff Profil XDA Material PBT']");
     private By addToBasket = By.xpath("//button[@class='button button--xl button--secondary']");
     private By closeButton = By.xpath("//button[@class='drawer__close-icon']");
     private By mouse = By.xpath("//a[text()='Mouse']");

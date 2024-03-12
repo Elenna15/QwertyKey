@@ -30,10 +30,10 @@ public class NewAddressTest extends BaseTest {
         sleep(3000L);
 
         LOG.info("Type Email");
-        newAddressPage.insertEmail(email);
+        signInPage.insertEmail(email);
 
         LOG.info("Type password");
-        newAddressPage.insertPassword(password);
+        signInPage.insertPassword(password);
 
         LOG.info("Click the connect button");
         signInPage.clickConnectButton();
@@ -41,11 +41,9 @@ public class NewAddressTest extends BaseTest {
 
         LOG.info("Click address button");
         newAddressPage.clickAddressButton();
-        sleep(2000L);
 
         LOG.info("Click add");
         newAddressPage.clickAdd();
-        sleep(3000L);
 
         LOG.info("Type name");
         newAddressPage.insertName(name);
@@ -73,6 +71,7 @@ public class NewAddressTest extends BaseTest {
 
         LOG.info("Click on the save button");
         newAddressPage.clickSaveButton();
+        sleep(2000L);
 
     }
 }

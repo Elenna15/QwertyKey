@@ -26,23 +26,10 @@ public class LogOutPage extends BasePage {
     private By disconnectButton = By.xpath("//a[text()='Deconectează-te']");
 
 
-    public void insertEmail(String email){
-        LOG.info("Typing Email");
-        driver.findElement(emailField).sendKeys(email);
-    }
-
-    public void insertPassword(String password){
-        LOG.info("Typing password");
-        driver.findElement(passwordField).sendKeys(password);
-    }
-
-    public void clickConnectButton(){
-        LOG.info("Clicking connect button");
-        driver.findElement(connectButton).click();
-    }
 
     public void clickDisconnectButton(){
         LOG.info("Clicking disconnect button");
         driver.findElement(disconnectButton).click();
     }
+
 }

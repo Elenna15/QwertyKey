@@ -1,7 +1,9 @@
 package pages.NewAddressPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -35,28 +37,19 @@ public class NewAddressPage extends BasePage {
     private By selectRegion = By.xpath("//form[@id='address_form_new']//select[@name='address[province]']");
     private By saveButton = By.xpath("//form[@id='address_form_new']//button[@is='custom-button']");
 
-    public void insertEmail(String email){
-        LOG.info("Typing Email");
-        driver.findElement(emailField).sendKeys(email);
-    }
 
-    public void insertPassword(String password){
-        LOG.info("Typing password");
-        driver.findElement(passwordField).sendKeys(password);
-    }
-
-    public void clickConnectButton(){
-        LOG.info("Clicking connect button");
-        driver.findElement(connectButton).click();
-    }
 
     public void clickAddressButton(){
         LOG.info("Clicking the address button");
+        WebDriverWait wait=new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "//a[text()='Adrese']")));
         driver.findElement(addressButton).click();
     }
 
     public void clickAdd(){
         LOG.info("Clicking add address");
+        WebDriverWait wait=new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "//div[text()='Adaugă o adresă']")));
         driver.findElement(addAddress).click();
     }
 

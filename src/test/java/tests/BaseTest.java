@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import pages.BasePage;
+import pages.ForgetPasswordPage.ForgetPasswordPage;
 import pages.LogOutPage.LogOutPage;
 import pages.NewAddressPage.NewAddressPage;
 import pages.OrderPage.OrderPage;
@@ -20,6 +21,7 @@ public class BaseTest {
     public OrderPage orderPage = OrderPage.getInstance();
     public SalePage salePage = SalePage.getInstance();
     public QuestionPage questionPage = QuestionPage.getInstance();
+    public ForgetPasswordPage forgetPasswordPage = ForgetPasswordPage.getInstance();
 
     @BeforeSuite
     public void init() {

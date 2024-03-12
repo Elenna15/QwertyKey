@@ -21,7 +21,6 @@ public class SaleTest extends BaseTest {
 
         LOG.info("Click sale button");
         salePage.clickSales();
-        sleep(2000L);
 
         LOG.info("Click view all");
         salePage.clickViewAll();
@@ -31,7 +30,6 @@ public class SaleTest extends BaseTest {
 
         LOG.info("Click brand");
         salePage.clickBrandButton();
-        sleep(2000L);
 
         LOG.info("Select the option");
         salePage.clickOptionBrand();
@@ -39,7 +37,6 @@ public class SaleTest extends BaseTest {
 
         LOG.info("Click layout");
         salePage.clickLayoutButton();
-        sleep(2000L);
 
         LOG.info("Select the option");
         salePage.clickOptionLayout();
@@ -54,7 +51,6 @@ public class SaleTest extends BaseTest {
 
         LOG.info("Click price");
         salePage.clickPriceButton();
-        sleep(2000L);
 
         LOG.info("Insert price");
         salePage.insertMinimum(price1);

@@ -1,6 +1,8 @@
 package pages.SalePage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -28,13 +30,15 @@ public class SalePage extends BasePage {
     private By layoutButton = By.xpath("//button/span[text()='Layout Tastatura']");
     private By optionLayout = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.layout_tastatura-3']");
     private By connectionButton = By.xpath("//button//span[text()='Tip Conexiune']");
-    private By optionConnection = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.tip_conexiune-2']");
+    private By optionConnection = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.tip_conexiune-1']");
     private By priceButton = By.xpath("//button//span[text()='Preț']");
     private By minimumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.gte']");
     private By maximumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.lte']");
 
     public void clickSales() {
         LOG.info("Clicking the sales button");
+        WebDriverWait wait=new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "//a[text()='Reduceri']")));
         driver.findElement(salesButton).click();
     }
 
@@ -50,6 +54,8 @@ public class SalePage extends BasePage {
 
     public void clickBrandButton() {
         LOG.info("Clicking the brand button");
+        WebDriverWait wait=new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "//button/span[text()='Brand']")));
         driver.findElement(brandButton).click();
     }
 
@@ -60,6 +66,8 @@ public class SalePage extends BasePage {
 
     public void clickLayoutButton() {
         LOG.info("Clicking the layout button");
+        WebDriverWait wait=new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "//button/span[text()='Layout Tastatura']")));
         driver.findElement(layoutButton).click();
     }
 
@@ -80,6 +88,8 @@ public class SalePage extends BasePage {
 
     public void clickPriceButton(){
         LOG.info("Clicking the price button");
+        WebDriverWait wait=new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "//button//span[text()='Preț']")));
         driver.findElement(priceButton).click();
     }
 
