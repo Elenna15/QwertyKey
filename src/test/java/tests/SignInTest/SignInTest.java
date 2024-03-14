@@ -33,5 +33,8 @@ public class SignInTest extends BaseTest {
         LOG.info("Click the connect button");
         signInPage.clickConnectButton();
 
+        LOG.info("Verify logo Choose QwertyKey");
+        Assert.assertTrue(signInPage.isLogo2Displayed(),"Logo is not displayed");
+
     }
 }

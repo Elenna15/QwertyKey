@@ -14,7 +14,7 @@ public class RegisterTest extends BaseTest {
 
     String name = "Elena";
     String lastName = "Negrea";
-    String email = "ceva.altceva@" + generateRandomCharacters(5) + ".com";
+    String email = "ceva.altcevaa@" + generateRandomCharacters(5) + ".com";
     String password = "parola1511";
 
     private String generateRandomCharacters(int i) {

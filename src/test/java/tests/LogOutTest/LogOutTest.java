@@ -2,6 +2,7 @@ package tests.LogOutTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -36,6 +37,9 @@ public class LogOutTest extends BaseTest {
 
         LOG.info("Click disconnect button");
         logOutPage.clickDisconnectButton();
+
+        LOG.info("Verify account button");
+        Assert.assertTrue(logOutPage.isAccountButtonDisplayed(), "Button is not displayed");
 
 
     }

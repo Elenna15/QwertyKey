@@ -50,7 +50,6 @@ public class OrderTest extends BaseTest {
         orderPage.clickMouse();
         sleep(3000L);
 
-
         LOG.info("Click on the mouse");
         orderPage.clickAMouse();
         sleep(2000L);
@@ -92,6 +91,7 @@ public class OrderTest extends BaseTest {
 
         LOG.info("Click delivery");
         orderPage.clickDelivery();
+        sleep(2000L);
 
 
 

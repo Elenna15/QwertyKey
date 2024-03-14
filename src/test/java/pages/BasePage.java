@@ -20,7 +20,6 @@ public class BasePage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
 
 
-
         LOG.info("Open browser maximize");
         driver.manage().window().maximize();
     }

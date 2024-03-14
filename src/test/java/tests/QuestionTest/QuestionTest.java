@@ -44,6 +44,7 @@ public class QuestionTest extends BaseTest {
 
         LOG.info("Click send button");
         questionPage.clickSendButton();
+        sleep(2000L);
 
 
     }

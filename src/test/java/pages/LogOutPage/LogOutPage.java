@@ -24,12 +24,17 @@ public class LogOutPage extends BasePage {
     private By passwordField = By.xpath("//input[@name='customer[password]']");
     private By connectButton = By.xpath("//div[text()='Conectează-te']");
     private By disconnectButton = By.xpath("//a[text()='Deconectează-te']");
+    private By accountButton = By.xpath("//span[text()='Deschide pagina contului']");
 
 
 
     public void clickDisconnectButton(){
         LOG.info("Clicking disconnect button");
         driver.findElement(disconnectButton).click();
+    }
+    public boolean isAccountButtonDisplayed(){
+        LOG.info("Verify if account button is displayed");
+        return driver.findElement(accountButton).isDisplayed();
     }
 
 }

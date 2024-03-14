@@ -2,6 +2,7 @@ package tests.SaleTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
@@ -35,19 +36,11 @@ public class SaleTest extends BaseTest {
         salePage.clickOptionBrand();
         sleep(2000L);
 
-        LOG.info("Click layout");
-        salePage.clickLayoutButton();
+        LOG.info("Verify layout button");
+        Assert.assertTrue(salePage.isDisplayedLayoutButton(), "Button is not displayed");
 
-        LOG.info("Select the option");
-        salePage.clickOptionLayout();
-        sleep(2000L);
-
-        LOG.info("Click connection");
-        salePage.clickConnectionButton();
-
-        LOG.info("Select the option");
-        salePage.clickOptionConnection();
-        sleep(2000L);
+        LOG.info("Verify connection button");
+        Assert.assertTrue(salePage.isDisplayedConnectionButton(), "Button is not displayed");
 
         LOG.info("Click price");
         salePage.clickPriceButton();

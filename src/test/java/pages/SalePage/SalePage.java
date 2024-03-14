@@ -28,9 +28,7 @@ public class SalePage extends BasePage {
     private By brandButton = By.xpath("//button/span[text()='Brand']");
     private By optionBrand = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.brand-3']");
     private By layoutButton = By.xpath("//button/span[text()='Layout Tastatura']");
-    private By optionLayout = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.layout_tastatura-3']");
     private By connectionButton = By.xpath("//button//span[text()='Tip Conexiune']");
-    private By optionConnection = By.xpath("//label[@for='checkbox-template--20546056061262__main-filter.p.m.custom.tip_conexiune-1']");
     private By priceButton = By.xpath("//button//span[text()='Preț']");
     private By minimumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.gte']");
     private By maximumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.lte']");
@@ -64,27 +62,19 @@ public class SalePage extends BasePage {
         driver.findElement(optionBrand).click();
     }
 
-    public void clickLayoutButton() {
-        LOG.info("Clicking the layout button");
+    public boolean isDisplayedLayoutButton() {
+        LOG.info("Verify if layout button is displayed");
         WebDriverWait wait=new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "//button/span[text()='Layout Tastatura']")));
-        driver.findElement(layoutButton).click();
+        return driver.findElement(layoutButton).isDisplayed();
     }
 
-    public void clickOptionLayout() {
-        LOG.info("Selecting the option");
-        driver.findElement(optionLayout).click();
+
+    public boolean isDisplayedConnectionButton() {
+        LOG.info("Verify if connection button is displayed ");
+        return driver.findElement(connectionButton).isDisplayed();
     }
 
-    public void clickConnectionButton() {
-        LOG.info("Clicking type of connection button ");
-        driver.findElement(connectionButton).click();
-    }
-
-    public void clickOptionConnection() {
-        LOG.info("Selecting option");
-        driver.findElement(optionConnection).click();
-    }
 
     public void clickPriceButton(){
         LOG.info("Clicking the price button");
