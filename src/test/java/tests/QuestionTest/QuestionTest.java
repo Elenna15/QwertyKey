@@ -21,6 +21,7 @@ public class QuestionTest extends BaseTest {
         return null;
     }
 
+
     @Test
     public void sendQuestion(){
         driver.get(newUrl);
@@ -44,8 +45,6 @@ public class QuestionTest extends BaseTest {
 
         LOG.info("Click send button");
         questionPage.clickSendButton();
-        sleep(2000L);
-
-
+        sleep(1000L);
     }
 }

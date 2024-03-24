@@ -26,6 +26,7 @@ public class RegisterPage extends BasePage {
     private By inputPassword = By.xpath("//input[@name='customer[password]']");
     private By create = By.xpath("//button[@class='button button--xl button--secondary w-full']");
 
+
     public void insertFirstName(String name){
         LOG.info("Inserting name");
         driver.findElement(inputFirstName).sendKeys(name);

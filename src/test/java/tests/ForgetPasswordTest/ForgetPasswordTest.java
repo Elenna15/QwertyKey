@@ -32,9 +32,9 @@ public class ForgetPasswordTest extends BaseTest {
 
         LOG.info("Insert Email address");
         forgetPasswordPage.insertEmail(email);
+        sleep(2000L);
 
         LOG.info("Click reset button");
         forgetPasswordPage.clickResetButton();
-
     }
 }

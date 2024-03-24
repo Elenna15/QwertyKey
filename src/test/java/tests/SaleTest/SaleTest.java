@@ -15,7 +15,6 @@ public class SaleTest extends BaseTest {
     String price2 = "700";
 
 
-
     @Test
     public void salePage(){
         sleep(2000L);
@@ -51,7 +50,6 @@ public class SaleTest extends BaseTest {
 
         LOG.info("Insert price");
         salePage.insertMaximum(price2);
-
-
+        sleep(3000L);
     }
 }

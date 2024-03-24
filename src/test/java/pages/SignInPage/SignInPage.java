@@ -26,6 +26,7 @@ public class SignInPage extends BasePage {
     private By connectButton = By.xpath("//div[text()='Conectează-te']");
     private By logo2 = By.xpath("//h2[text()='Alege QwertyKey!']");
 
+
     public boolean isLogoDisplayed(){
         LOG.info("Verify if logo displayed");
         return driver.findElement(logo).isDisplayed();

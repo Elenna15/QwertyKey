@@ -27,7 +27,6 @@ public class LogOutPage extends BasePage {
     private By accountButton = By.xpath("//span[text()='Deschide pagina contului']");
 
 
-
     public void clickDisconnectButton(){
         LOG.info("Clicking disconnect button");
         driver.findElement(disconnectButton).click();

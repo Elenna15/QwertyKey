@@ -40,7 +40,5 @@ public class LogOutTest extends BaseTest {
 
         LOG.info("Verify account button");
         Assert.assertTrue(logOutPage.isAccountButtonDisplayed(), "Button is not displayed");
-
-
     }
 }

@@ -33,6 +33,7 @@ public class SalePage extends BasePage {
     private By minimumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.gte']");
     private By maximumPrice = By.xpath("//facet-dialog//input[@id='filter.v.price.lte']");
 
+
     public void clickSales() {
         LOG.info("Clicking the sales button");
         WebDriverWait wait=new WebDriverWait(driver, 10);
@@ -92,6 +93,5 @@ public class SalePage extends BasePage {
         LOG.info("Inserting price");
         driver.findElement(maximumPrice).sendKeys(price2);
     }
-
 
 }

@@ -27,7 +27,7 @@ public class OrderPage extends BasePage {
     private By addToBasket = By.xpath("//button[@class='button button--xl button--secondary']");
     private By closeButton = By.xpath("//button[@class='drawer__close-icon']");
     private By mouse = By.xpath("//a[text()='Mouse']");
-    private By aMouse = By.xpath("//a[text()='Dareu Tiger Wireless Fastcharge - Ediție Limitată']");
+    private By aMouse = By.xpath("//a[text()='Mouse Dareu UFO Wireless Bluetooth Silentios Office']");
     private By seeBasket = By.xpath("//a[text()='Vezi coșul']");
     private By addToBasket2 = By.xpath("//button[@class='button button--xl button--secondary']");
     private By checkout = By.xpath("//button[@class='button button--xl w-full']");
@@ -139,6 +139,5 @@ public class OrderPage extends BasePage {
         LOG.info("Clicking delivery with cash");
         driver.findElement(deliveryBox).click();
     }
-
 
 }

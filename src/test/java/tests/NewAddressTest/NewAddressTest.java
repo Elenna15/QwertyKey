@@ -72,6 +72,5 @@ public class NewAddressTest extends BaseTest {
         LOG.info("Click on the save button");
         newAddressPage.clickSaveButton();
         sleep(2000L);
-
     }
 }

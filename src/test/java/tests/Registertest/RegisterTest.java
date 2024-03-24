@@ -38,6 +38,7 @@ public class RegisterTest extends BaseTest {
 
         LOG.info("Insert password");
         registerPage.insertPassword(password);
+        sleep(2000L);
 
         LOG.info("Click create button");
         registerPage.clickCreateButton();

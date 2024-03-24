@@ -20,8 +20,6 @@ public class OrderTest extends BaseTest {
     String phone = "0745127783";
 
 
-
-
     @Test
     public void order(){
         sleep(3000L);
@@ -55,7 +53,7 @@ public class OrderTest extends BaseTest {
         sleep(2000L);
 
         LOG.info("Add to basket");
-        orderPage.clickAdd();
+        orderPage.clickAdd2();
         sleep(2000L);
 
         LOG.info("See the basket");
@@ -92,8 +90,5 @@ public class OrderTest extends BaseTest {
         LOG.info("Click delivery");
         orderPage.clickDelivery();
         sleep(2000L);
-
-
-
     }
 }
